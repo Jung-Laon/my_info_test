@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> info_my </title>
+    <style type="text/css">
+        table, tr, td{
+            border : 0px solid gray;
+            margin: 10px;
+        }
+        #main_b{
+            width: 100%;
+            height: 100%;
+            background-color: #D9E5FF;
+            font-family: sans-serif;
+            color: black;
+        }
+        .info_head{
+            margin: 15px;
+            text-align: left;
+            background-color: #D9E5FF;
+            font-family: sans-serif;
+            font-size: 25pt;
+        }
+        #info_poto_text{
+            margin: 15px;
+            text-align: left;
+            font-size: 15pt;
+            font-family: sans-serif;
+        }
+        .btn{
+            display: block;
+            width: 250px;
+            height: 50px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            background-color: #B6CCFF;
+            color: gray;
+            border-radius: 40px;
+            font-size: 12pt;
+        }
+        .btn_close{
+            display: block;
+            width: 80px;
+            height: 30px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            background-color: #D9E5FF;
+            border: 1px solid;
+            color: gray;
+            border-radius: 40px;
+            font-size: 10pt;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .popup{
+            color: white;
+            font-color: white;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            left: 70%;
+            top: 35%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: right;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .popup a{
+            color: white;
+        }
+        .popup:target{
+            opacity: 1;
+        }
+        .popup:target + .dim{
+            opacity: 1;
+            z-index: 2;
+        }
+        .dim{
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body id = "main_b">
+    <header class="info_head">
+        Dasol's_Information
+   </header>
+   
+    <div id="info_poto_text">
+        <table>
+            <tr>
+                <td>
+                    <img src="./img/me3.jpg" width="500px" style="margin-right: 15px;">
+                </td>
+                <td style="font-size: 18pt;">
+                    NAME : 정다솔(Jung Dasol)<br> <br>
+                    MBTI : ISFP <br> <br>
+                    DATE OF BIRTH : 1997.11.23 <br> <br>
+                    CONSTELLATION : 사수자리 <br> <br>
+                    UNIVERSITY : 동덕여자대학교 <br> <br>
+                    MAJOR : 컴퓨터학과 / DUAL MAJOR : 독일어과 <br> <br> 
+                    HOBBIES : 운동, 캘리그라피, 게임, 음악 감상
+                    
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table>
+          <tr>
+            <td>
+                <a href ="#com_pop" class="btn"> Computer Language </a> 
+                <div class="popup" id="com_pop">
+                    <img src="./img/c.png" title="c언어" width="200" style="margin: 20px;">
+                    <img src="./img/java.png" title="자바" width="200" style="margin: 20px;">
+                    <img src="./img/sql.png" title="마이에스큐엘" width="200" style="margin: 20px;"><br>
+                    <img src="./img/linux.png" title="리눅스" width="200" style="margin: 20px;">
+                    <img src="./img/weblang.png" title="HTMl, CSS, JS" width="400" height="230px">
+                     
+                </div>
+            </td>
+            <td> <a href ="#hobby_pop" class="btn"> Hobbies </a>
+                <div class="popup" id="hobby_pop">
+                    <img src="./img/hobby_1.jpg" title="태권도1" width="245" style="margin: 5px;">
+                    <img src="./img/hobby_2.jpg" title="태권도2" width="260" height="220" style="margin: 5px;">
+                    <img src="./img/hobby_4.jpg" title="캘리그라피" width="200" style="margin: 5px;"><br>
+                    <img src="./img/hobby_5.jpg" title="사진" width="360">
+                    <img src="./img/hobby_3.png" title="파판14" width="360" style="margin: 5px;">
+                </div>
+            </td>
+            <td> <a href ="#trip_pop" class="btn"> Travel </a>
+                <div class="popup" id="trip_pop">
+                    
+                    <img src="./img/trip_5.jpg" title="제주도" width="240" height="200" >
+                    <img src="./img/trip_2.jpg" title="독일2" width="240" height="200" style="margin: 5px;">
+                    <img src="./img/trip_3.jpg" title="아부다비" width="240" height="200" style="margin: 5px;"><br>
+                    <img src="./img/trip_4.jpg" title="체코" width="360" style="margin: 5px;">
+                    <img src="./img/trip_1.jpg" title="독일1" width="360" style="margin: 5px;">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> <a href="#a" class="btn_close"> 닫기 </a> </td>
+        </tr>
+    </table>
+</body>
+
+</html>
